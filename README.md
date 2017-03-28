@@ -124,6 +124,61 @@ similar to CSS, use `[attr]` to add custom attributes to your element
 ___
 
 
+### Item Numbering: `$`
+with the multiplication `*` operator, you can repeat elements, numbering them with `$`
+
+		ul>li.item$*5
+
+```html
+<ul>
+	<li class="item1"></li>
+	<li class="item2"></li>
+	<li class="item3"></li>
+	<li class="item4"></li>
+	<li class="item5"></li>
+</ul>
+```
+
+* use multiple `$$$` to pad with zeros 
+
+#### Change numbering base and direction with `@-` after `$`
+
+
+___
+
+## Add Text: `{}`
+use curly braces to add text to any element
+
+		a{Click me}
+
+```html
+<a href="#">Click me</a>
+```
+
+___
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

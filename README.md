@@ -158,6 +158,135 @@ use curly braces to add text to any element
 ___
 
 
+## Element Types 
+
+All Emmet elements definitions are stored in `snippets.json` file in the following format:
+
+```json
+{
+    "html": {
+        "abbreviations": {
+            "a": "<a href=\"\">",
+            "link": "<link rel=\"stylesheet\" href=\"\" />"
+            ...
+        },
+        "snippets": {
+            "cc:ie6": "<!--[if lte IE 6]>\n\t${child}|\n<![endif]-->"
+            ...
+        }
+    },
+
+    "css": {
+        ...
+    }
+}
+```
+
+## Snippets and Abbreviations
+
+snippets are just the same as how they are in Sublime Text
+
+* element name
+* default attributes
+* attributes order
+* attributes default values
+* should element contain closing tag
+
+
+
+		link
+
+```html
+<link rel="stylesheet" href="#">
+```
+
+
+### abbreviations
+
+		bq
+
+```html
+<blockquote></blockquote>
+```
+
+___
+
+## Implicit Tag Names
+
+when adding attributes, the default element is `div`
+
+	.content
+
+```html
+<div class="content"></div>
+```
+
+Resolve tag based on the parent
+
+* `li` for `ul` and `ol`
+* `tr` for `table`, `tbody`, `tfoot`
+* `td` for `tr`
+* `option` for `select` and `optgroup`
+
+
+		.wrap>.content
+
+```html
+<div class="wrap">
+	<div class="content"></div>
+</div>
+```
+
+		em>.info
+
+```html
+<em><span class="info"></span></em>
+```
+
+		ul>.item*3
+
+```html
+<ul>
+	<li class="item"></li>
+	<li class="item"></li>
+	<li class="item"></li>
+</ul>
+````
+
+		table>#row$*5>[colspan=2]
+
+```html
+<table>
+	<tr id="row1">
+		<td colspan="2"></td>
+	</tr>
+	<tr id="row2">
+		<td colspan="2"></td>
+	</tr>
+	<tr id="row3">
+		<td colspan="2"></td>
+	</tr>
+	<tr id="row4">
+		<td colspan="2"></td>
+	</tr>
+	<tr id="row5">
+		<td colspan="2"></td>
+	</tr>
+</table>
+```
+
+___
+
+
+
+
+
+
+
+
+
+
+
 
 
 

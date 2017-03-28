@@ -277,18 +277,38 @@ Resolve tag based on the parent
 
 ___
 
+## Lorem Ipsum Generator
 
 
+		lorem
 
+generates a 30 word snippet of lorem text. Default is 30 words, and you can specify how many words should be generated
 
+		lorem10
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, est!			
 
+		p*4>lorem10
 
+```html
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, sunt.</p>
+<p>Perferendis ea, perspiciatis dolorem dignissimos doloribus repellat saepe dolore repudiandae.</p>
+<p>Quas doloremque sit ea a, et aut error in dolores!</p>
+<p>Autem, assumenda, facilis. Assumenda delectus numquam, soluta! Maxime, ut, recusandae.</p>
+```
 
+lorem also uses the implicit tag name generator. 
 
+		ul.generic-list>lorem10.item*4
 
-
-
+```html
+<ul class="generic-list">
+	<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, numquam?</li>
+	<li class="item">Id debitis inventore tempora aut, ipsum ab saepe quas iste.</li>
+	<li class="item">Dolorem a error cupiditate, libero beatae nisi eum accusantium perferendis.</li>
+	<li class="item">Laboriosam doloribus nisi blanditiis voluptatum aliquid sed voluptate culpa facilis.</li>
+</ul>
+```		
 
 
 
